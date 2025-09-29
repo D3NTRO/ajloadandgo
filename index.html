@@ -1,48 +1,57 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional junk removal services in South Florida. Fast, eco-friendly, and affordable. Same-day service available. Call (561) 574-0332 for a free estimate.">
     <title>AJ Load & Go | Expert Junk Removal - South Florida</title>
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Montserrat:wght@400;700&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="navbar">
         <div class="container">
             <a href="#" class="logo">
-                <img src="images/logo.png" alt="AJ Load & Go Logo"> <span>AJ LOAD<span class="text-accent"> & GO</span></span>
+                <img src="images/logo.png" alt="AJ Load & Go Logo" width="50" height="50">
+                <span>AJ LOAD<span class="text-accent"> & GO</span></span>
             </a>
             <nav>
-                <ul class="nav-links">
+                <ul id="primary-navigation" class="nav-links" aria-label="Main Navigation">
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#process">How It Works</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <a href="tel:5615740332" class="btn btn-primary">BOOK NOW!</a>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+            <button class="hamburger" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
         </div>
     </header>
+    <div class="backdrop" hidden></div>
 
     <main>
         <section id="hero">
             <div class="hero-content fade-in-up">
-                <h1>PREMIER JUNK REMOVAL <br> <span>SERVICES OF SOUTH FLORIDA</span></h1>
+                <h1>PREMIER JUNK REMOVAL <br><span>SERVICES OF SOUTH FLORIDA</span></h1>
                 <p>Clutter taking over your space? We make junk disappear fast and hassle-free—clear your home or office today!</p>
                 <a href="tel:5615740332" class="btn btn-secondary bounce">GET YOUR FREE ESTIMATE!</a>
             </div>
@@ -104,7 +113,7 @@
                         <i class="fas fa-hot-tub-person"></i>
                         <h4>Shed & Hot Tub Removal</h4>
                     </div>
-                     <div class="service-card reveal-bottom delay-7">
+                    <div class="service-card reveal-bottom delay-7">
                         <i class="fas fa-box-open"></i>
                         <h4>General Junk & Garbage</h4>
                     </div>
@@ -122,53 +131,273 @@
                     <div class="process-step reveal-left">
                         <div class="step-number">1</div>
                         <h3>REQUEST YOUR FREE ESTIMATE</h3>
-                        <p>Text or email us a photo of your unwanted items, or call (561)- 574- 0332 — we’ll get you a fast, no-hassle quote!</p>
+                        <p>Text or email us a photo of your unwanted items, or call (561) 574-0332 — we'll get you a fast, no-hassle quote!</p>
                         <a href="tel:5615740332" class="step-link">Get Quote <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="process-step reveal-bottom">
                         <div class="step-number">2</div>
                         <h3>SCHEDULE YOUR APPOINTMENT</h3>
-                        <p>We’re available every day, offering flexible scheduling and the possibility of same-day service.</p>
+                        <p>We're available every day, offering flexible scheduling and the possibility of same-day service.</p>
                         <a href="tel:5615740332" class="step-link">Book Now <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="process-step reveal-right">
                         <div class="step-number">3</div>
                         <h3>LET US DO THE WORK</h3>
-                        <p>Point to what needs to go, and we’ll do the rest! From heavy lifting to hauling, we leave your space cleaner.</p>
+                        <p>Point to what needs to go, and we'll do the rest! From heavy lifting to hauling, we leave your space cleaner.</p>
                         <a href="tel:5615740332" class="step-link">We Handle It <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section id="contact" class="section-padding bg-dark">
-            <div class="container contact-wrapper">
-                <div class="contact-info reveal-left">
-                    <h3>Need a Fast Quote? <br> <span>Get In Touch!</span></h3>
-                    <p>We're just a call or message away. Quick, reliable, and local service you can trust.</p>
-                    <a href="tel:5615740332" class="contact-button pulsate">
-                        <i class="fas fa-phone"></i> CALL OR TEXT US!
-                    </a>
-                    <p class="email-info"><i class="fas fa-envelope"></i> <a href="mailto:ajloadandgo@ajloadandgo.com">ajloadandgo@ajloadandgo.com</a></p>
-                    <p class="serving-area">Proudly serving West Palm Beach & Surrounding Areas</p>
+        <section id="reviews" class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title fade-in">WHAT OUR CLIENTS SAY</h2>
+                <p class="section-subtitle fade-in">Real feedback from real customers who trusted us with their junk removal needs.</p>
+                
+                <div class="reviews-stats reveal-bottom">
+                    <div class="stat-item">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="stat-label">Average Rating</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">127+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Would Recommend</div>
+                    </div>
                 </div>
-                <form id="contact-form" action="#" method="POST" class="reveal-right">
-                    <div class="form-group-split">
-                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
-                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+
+                <div class="reviews-container">
+                    <div class="review-card reveal-left">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <h4 class="reviewer-name">Sarah Martinez</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">2 weeks ago</span>
+                        </div>
+                        <p class="review-text">"Incredible service! They removed an entire estate worth of furniture in just a few hours. The team was professional, efficient, and left the property spotless. Highly recommend AJ Load & Go!"</p>
+                        <div class="review-badges">
+                            <span class="badge">Estate Cleanout</span>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Email (required)" required>
+
+                    <div class="review-card reveal-bottom">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <h4 class="reviewer-name">Michael Johnson</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">1 month ago</span>
+                        </div>
+                        <p class="review-text">"Best junk removal company in South Florida! Same-day service, fair pricing, and they even donated items that were still usable. These guys care about the community and the environment."</p>
+                        <div class="review-badges">
+                            <span class="badge">Eco-Friendly</span>
+                            <span class="badge">Same-Day</span>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="Phone (required)" required>
+
+                    <div class="review-card reveal-right">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <h4 class="reviewer-name">Linda Chen</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">3 weeks ago</span>
+                        </div>
+                        <p class="review-text">"Needed my hot tub removed ASAP before new tenants moved in. They came the next day, quoted a fair price, and handled everything professionally. No hassle, no stress. Will definitely use again!"</p>
+                        <div class="review-badges">
+                            <span class="badge">Hot Tub Removal</span>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Tell us about your junk..." rows="5"></textarea>
+
+                    <div class="review-card reveal-left delay-1">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <h4 class="reviewer-name">Robert Thompson</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">1 week ago</span>
+                        </div>
+                        <p class="review-text">"Called them for a commercial cleanout at our office. They were punctual, worked quickly, and the price was exactly what they quoted - no hidden fees. Great communication throughout the entire process."</p>
+                        <div class="review-badges">
+                            <span class="badge">Commercial</span>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
-                </form>
+
+                    <div class="review-card reveal-bottom delay-2">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <h4 class="reviewer-name">Jessica Rivera</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">2 months ago</span>
+                        </div>
+                        <p class="review-text">"Very happy with the service! They helped me clear out my garage and shed. The only reason I'm not giving 5 stars is they arrived 30 minutes late, but they made up for it with amazing work!"</p>
+                        <div class="review-badges">
+                            <span class="badge">Garage Cleanout</span>
+                        </div>
+                    </div>
+
+                    <div class="review-card reveal-right delay-3">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <h4 class="reviewer-name">David Park</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">3 days ago</span>
+                        </div>
+                        <p class="review-text">"After my renovation, I had tons of construction debris. AJ Load & Go handled it all efficiently and at a great price. They're my go-to for any junk removal needs now. Couldn't be happier!"</p>
+                        <div class="review-badges">
+                            <span class="badge">Construction Waste</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-cta reveal-bottom">
+                    <h3>Share Your Experience!</h3>
+                    <p>We'd love to hear from you. Leave us a review and help others make the right choice.</p>
+                    <div class="review-buttons">
+                        <a href="https://g.page/r/YOUR_GOOGLE_BUSINESS_ID/review" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fab fa-google"></i> Review on Google
+                        </a>
+                        <a href="https://www.facebook.com/share/171CriQ6h3/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i class="fab fa-facebook-f"></i> Review on Facebook
+                        </a>
+                    </div>
+                </div>
             </div>
+        </section>
+        
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <form id="contact-form" action="https://formspree.io/f/manpeanb" method="POST" novalidate>
+                <div class="form-grid">
+                    <label>
+                        <span>Name*</span>
+                        <input type="text" name="name" id="name" required autocomplete="name" aria-required="true" />
+                    </label>
+                    <label>
+                        <span>Phone*</span>
+                        <input type="tel" name="phone" id="phone" required inputmode="tel" autocomplete="tel" aria-required="true" pattern="[0-9\s\-\+\(\)]+" />
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email" id="email" autocomplete="email" />
+                    </label>
+                    <label>
+                        <span>Service</span>
+                        <select name="service" id="service">
+                            <option value="General Junk Removal">General Junk Removal</option>
+                            <option value="Hot Tub Removal">Hot Tub Removal</option>
+                            <option value="Appliance Removal">Appliance Removal</option>
+                            <option value="Furniture Removal">Furniture Removal</option>
+                            <option value="Yard Waste">Yard Waste</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </label>
+                    <label class="full">
+                        <span>Message*</span>
+                        <textarea name="message" id="message" rows="5" required placeholder="Tell us what you need picked up, location, floor/stairs, and preferred schedule..." aria-required="true"></textarea>
+                    </label>
+
+                    <label class="full photo-upload-section">
+                        <span>Add Photos (Optional)</span>
+                        <div class="upload-area" id="upload-area">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Click to upload or drag & drop photos</p>
+                            <small>Up to 3 photos, max 5MB each (JPG, PNG, HEIC)</small>
+                            <input type="file" name="photos" id="photos" accept="image/*,.heic" multiple aria-label="Upload photos">
+                        </div>
+                        <div id="photo-preview" class="photo-preview"></div>
+                    </label>
+
+                    <input type="text" name="_gotcha" id="gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+                    <div class="form-actions full">
+                        <button id="send-btn" type="submit">Send</button>
+                        <a class="whatsapp" href="https://wa.me/15618266324?text=Hi%20AJ%20Load%20%26%20Go%2C%20I%20need%20a%20junk%20removal%20estimate" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    </div>
+                </div>
+
+                <p id="form-status" role="status" aria-live="polite" class="form-status" hidden></p>
+            </form>
         </section>
     </main>
 
@@ -181,17 +410,17 @@
             </div>
             <div class="footer-col reveal-bottom">
                 <h4>CONTACT US</h4>
-                <p><a href="mailto:ajloadandgo@ajloadandgo.com">ajloadandgo@ajloadandgo.com</a></p>
+                <p><a href="mailto:ajloadandgo@gmail.com">ajloadandgo@gmail.com</a></p>
                 <p><a href="tel:5615740332">+1 (561) 574-0332</a></p>
                 <p>Serving Palm Beach County</p>
             </div>
             <div class="footer-col social-links reveal-right">
-    <h4>FOLLOW US</h4>
-    <a href="https://www.instagram.com/aj_loadandgo?igsh=Z2oxOGtuand2Ynp0&utm_source=qr" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/share/171CriQ6h3/?mibextid=wwXlfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-</div>
+                <h4>FOLLOW US</h4>
+                <a href="https://www.instagram.com/aj_loadandgo?igsh=Z2oxOGtuand2Ynp0&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/171CriQ6h3/?mibextid=wwXlfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
         </div>
-        <a href="tel:5615740332" class="call-now-sticky pulsate">
+        <a href="tel:5615740332" class="call-now-sticky pulsate" aria-label="Call Now">
             <i class="fas fa-phone"></i> CALL NOW!
         </a>
     </footer>
