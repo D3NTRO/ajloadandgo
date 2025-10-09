@@ -889,11 +889,10 @@ img {
 
 /* FOOTER */
 footer {
-  background: var(--footer-bg);
+  background: #1c1c1c;
   color: #aaa;
   padding: 3rem 0 5rem;
   position: relative;
-  transition: background 0.3s ease;
 }
 
 .footer-content {
@@ -904,17 +903,18 @@ footer {
 
 .footer-col h4 {
   font-family: var(--font-heading);
-  color: var(--text-primary);
+  color: #ffffff;
   margin-bottom: 0.75rem;
   font-size: 1.1rem;
 }
 
 .footer-col p {
   margin-bottom: 0.5rem;
+  color: #cccccc;
 }
 
 .footer-col a {
-  color: #aaa;
+  color: #cccccc;
   text-decoration: none;
   transition: color var(--transition);
 }
@@ -928,11 +928,17 @@ footer {
   font-size: 1.6rem;
   margin-right: 0.85rem;
   display: inline-block;
+  color: #ffffff;
+}
+
+.social-links a:hover {
+  color: var(--green);
 }
 
 .names {
   font-size: 0.9rem;
   opacity: 0.8;
+  color: #cccccc;
 }
 
 .call-now-sticky {
