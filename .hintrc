@@ -3,6 +3,24 @@
     "development"
   ],
   "hints": {
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "meta[name=theme-color]",
+          "img[fetchpriority]"
+        ]
+      }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter"
+        ]
+      }
+    ],
+    "no-inline-styles": "off"
   }
 }
