@@ -51,6 +51,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -61,6 +62,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
 }
 
 img {
@@ -687,6 +689,12 @@ img {
   color: var(--text-primary);
 }
 
+.contact label small {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--text-muted);
+}
+
 .contact input,
 .contact select,
 .contact textarea {
@@ -953,11 +961,17 @@ footer {
   font-family: var(--font-heading);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   z-index: 999;
-  transition: transform var(--transition);
+  transition: transform var(--transition), opacity var(--transition), visibility var(--transition);
 }
 
 .call-now-sticky:hover {
   transform: scale(1.05);
+}
+
+.call-now-sticky.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /* Animations */
@@ -1218,8 +1232,17 @@ footer {
   .call-now-sticky {
     bottom: 12px;
     right: 12px;
-    padding: 0.8rem 1rem;
-    font-size: 0.9rem;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    font-size: 0;
+  }
+
+  .call-now-sticky i {
+    margin: 0;
+    font-size: 1.1rem;
   }
 
   .logo {

@@ -1,0 +1,9 @@
+{
+  "name": "aj-load-and-go",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static client website for AJ Load & Go junk removal.",
+  "scripts": {
+    "test": "node tests/site.test.mjs"
+  }
+}

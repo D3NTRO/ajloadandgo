@@ -110,6 +110,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Keep the floating call CTA from covering the contact form.
+    const contactSection = document.getElementById('contact');
+    const stickyCallButton = document.querySelector('.call-now-sticky');
+
+    if (contactSection && stickyCallButton) {
+        const contactObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                stickyCallButton.classList.toggle('is-hidden', entry.isIntersecting);
+            });
+        }, { threshold: 0.05 });
+
+        contactObserver.observe(contactSection);
+    }
+
     // Smooth scroll for internal links
     if (navLinks) {
         const menuAnchors = navLinks.querySelectorAll('a[href^="#"]');
